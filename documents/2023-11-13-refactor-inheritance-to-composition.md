@@ -1,7 +1,7 @@
 # Refactoring Meshtastic Firmware from Inheritance to Composition
 
 - Start Date: 2023-11-13
-- RFC PR: [Meshtastic/rfcs#0000](https://github.com/Meshtastic/rfcs/pull/0000)
+- RFC PR: [Meshtastic/rfcs#1](https://github.com/meshtastic/rfcs/pull/1)
 - Affected Components: Firmware
 
 ## Summary
