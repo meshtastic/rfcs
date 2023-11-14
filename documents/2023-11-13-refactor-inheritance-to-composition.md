@@ -131,9 +131,7 @@ Potential downsides of this migration are discussed below:
 
 ## Prior Art
 
-[Discuss any similar implementations in other projects or technologies and what can be learned from them. Include both successful and unsuccessful examples.]
-
-None to speak of.
+N/A, not a user-facing feature proposal.
 
 ## Unresolved Questions
 
