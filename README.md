@@ -10,7 +10,7 @@ The Meshtastic RFC repository serves as a centralized hub for collaboratively di
 
 1. **Familiarize with the RFC Template**: Before submitting an RFC, please review our [RFC Template](template.md). This template provides a structured format for proposing changes.
 
-2. **Submit Your RFC as a PR**: Create your RFC using the template and submit it as a Pull Request (PR) to this repository. Your PR will serve as the primary platform for discussion about your proposal.
+2. **Submit Your RFC as a PR**: Create your RFC using the template and submit it as a Pull Request (PR) to this repository. Use the `Summary` section of your RFC as the PR description. Your PR will serve as the primary platform for discussion about your proposal.
 
 3. **Participate in the Discussion**: Engage with the community and project maintainers in the PR discussion. This is where your proposal will be reviewed, and feedback will be provided.
 
