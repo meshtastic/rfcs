@@ -25,7 +25,7 @@ The primary objective of this RFC is to **initiate a community-driven discussion
 
 ### Call to Action
 +
-We invite all community members to contribute their perspectives, suggestions, and insights regarding the problematic use of "channel". This collaborative effort will ensure that any terminology changes will serve to enhance understanding, usability, and community engagement with Meshtastic.
+We invite all community members to contribute their perspectives, suggestions, and insights regarding the preset naming conventions. This collaborative effort will ensure that any terminology changes will serve to enhance understanding, usability, and community engagement with Meshtastic.
 
 This RFC represents an opportunity to refine our language and align more closely with our platform's innovative spirit. Your participation is crucial to achieving a consensus that reflects the diverse experiences and needs of the Meshtastic community.
 
