@@ -1,4 +1,4 @@
-_Using the format from @Tekstrand, as regular template is missing_
+@TEKSTRAND FORMAT (See further down for regular Meshtastic RFC FORMAT IN ADDITION TO THIS)
 
 ## RFC
 
@@ -28,3 +28,62 @@ The primary objective of this RFC is to **initiate a community-driven discussion
 We invite all community members to contribute their perspectives, suggestions, and insights regarding the problematic use of "channel". This collaborative effort will ensure that any terminology changes will serve to enhance understanding, usability, and community engagement with Meshtastic.
 
 This RFC represents an opportunity to refine our language and align more closely with our platform's innovative spirit. Your participation is crucial to achieving a consensus that reflects the diverse experiences and needs of the Meshtastic community.
+
+
+
+
+# Modem Preset renaming
+
+- Start Date: 2024-02-14
+- RFC PR: [Meshtastic/rfcs#6]([https://github.com/Meshtastic/rfcs/pull/0000](https://github.com/meshtastic/rfcs/pull/6))
+- Affected Components: Pervasive (Docs, Apps, Firmware, Protos)
+
+## Summary
+
+The current naming convention of the Modem Presets is misleading, and does not represent theoretical or real-world effects. The terminology such as "Fast", "Slow", "Long", and "Short" cause users to assume that each preset has tradeoffs. For example users may assume "MediumFast" is only  for moderate (which is not defined or tested) ranges, while also assuming the Slow option will result in slow message sending or some other vague effects.  
+
+## Motivation
+
+We want to change this because it will significantly improve user understanding and expectations around modem presets.
+
+## Ecosystem Impact
+
+Pervasive (Docs, Apps, Firmware, Protos)
+
+## Protocol Buffer Changes
+
+Yes, requires full coordinate from Docs team and Developer team.
+
+## Technical Details
+
+Replace words in all locations with new terms.
+
+### Compatibility Considerations
+
+Unclear, I'm not a developer.
+
+### Security Considerations
+
+Unclear, I'm not a developer.
+
+### Performance Considerations
+
+Unclear, I'm not a developer.
+
+## Drawbacks
+
+None.
+
+## Rationale and Alternatives
+
+Has been a to-do for 2-3 years now.
+
+## Prior Art
+
+N/A
+
+## Unresolved Questions
+
+- What aspects of the proposal need further discussion or exploration during the RFC process?
+- Are there technical challenges or uncertainties that need to be addressed?
+
