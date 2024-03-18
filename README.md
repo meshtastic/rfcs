@@ -8,7 +8,7 @@ The Meshtastic RFC repository serves as a centralized hub for collaboratively di
 
 ## How to Make an RFC
 
-1. **Familiarize with the RFC Template**: Before submitting an RFC, please review our [RFC Template](template.md). This template provides a structured format for proposing changes.
+1. **Familiarize with the RFC Template**: Before submitting an RFC, please review our [RFC Template](YYYY-MM-DD-feature-name.md). This template provides a structured format for proposing changes.
 
 1. **Write up your proposal**: There are two methods to write up your proposal within this repository. If you are comfortable with how to work with Git, we recommend you clone this repository, create a copy of the RFC template in the `/rfcs` directory, and submit a PR. If you are not familiar with Git, we recommend you follow the steps below:
 
