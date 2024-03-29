@@ -1,0 +1,61 @@
+
+    Start Date: 2024-03-28
+    RFC PR: Meshtastic/rfcs#0000
+    Affected Components: (e.g., Firmware, all clients)
+#Summary
+Currently, many people turn on the MQTT settings and unknowingly flood the local mesh with traffic while also uploading other people's traffic to the internet. My proposal is that a second set of modem presets are used for this. This will force a segregation between the people that want to use the online features and those that don’t by default. RF packets on this new setting would still be meshed to other users with this same setting but with these users only, thereby not piggybacking on the default long/fast mesh.
+
+#Motivation
+[Why are we doing this? What problem does it solve or what use cases does it support? Discuss the benefits for the different components of the Meshtastic ecosystem, including end-users, developers, and core maintainers.]
+A single user can currently flood the local public network with out-of-region traffic that gets propagated through the mesh, cluttering up maps and reducing limited bandwidth on long/fast. By focusing on modem presets tailored to higher traffic (and shorter range) this new mesh can more easily handle the influx of traffic. The shorter range will be compensated for by the assumption that there will be more like-minded people in each region passing on the traffic to MQTT.
+
+#Ecosystem Impact
+[Explain how this change will affect the various components of the Meshtastic ecosystem, including firmware, phone, desktop, and web applications. Address any coordination required among these components.]
+The two separate "default" meshes in each region will have incompatible modem settings. 
+Private channel settings won’t be affected.
+No hardware or application changes other than setting the new modem preset which will enforce MQTT traffic off the default long/fast preset.
+
+
+#Protocol Buffer Changes
+[Detail the changes proposed to Meshtastic's protocol buffer definitions, if any. Explain how these changes will be managed and propagated across the different applications and firmware.]
+None.
+
+#Technical Details
+[Provide a more in-depth technical explanation of the proposed changes, focusing on the high-level architecture and how different components of the ecosystem will interact with these changes. This section should explain your proposed solution in enough detail that someone familiar with the Meshtastic ecosystem can understand the design and implementation of the feature.]
+None required. There will just be new modem presets when MQTT is turned on. Short/Fast or Medium/Fast would be good candidates.
+
+#Compatibility Considerations
+[Discuss how the proposed changes will affect backward compatibility across the ecosystem. Include strategies for handling compatibility issues. Discuss whether this change requires any version bumps.]
+All users wanting to continue to use MQTT will need to update to the latest firmware and the their local RF mesh will lose range (at the expense of increased bandwidth) so additional RF nodes may be required for the same coverage where internet is not available to fall back to.
+
+#Security Considerations
+[Address any security implications of the proposed changes, especially those that might arise from modifications in protocol buffers and cross-component communication.]
+None
+
+#Performance Considerations
+[Evaluate how the change will impact the performance of various components in the ecosystem, including the efficiency and responsiveness of Meshtastic devices and applications.]
+The performance of MQTT users would be increased as they have more available bandwidth.
+Performance of Non-MQTT (default long/fast) would be increased as there would be no out of region packets passed along the public mesh.
+
+#Drawbacks
+[Discuss the potential downsides or limitations of the proposal. Why might this change be controversial or challenging to implement?]
+The new setup wouldn’t allow piggybacking off the established long/fast networks in different regions. The new setup would lock MQTT users out of local RF only user's network.
+
+#Rationale and Alternatives
+Disable MQTT by default on all channels but allow an override with a warning pop-up that they may flood the local mesh with traffic.
+
+#Why is this approach the best option?
+People wanting to talk over the internet are now able to only talk and view data from others thinking the same. People wanting local mesh only do not have to deal with increased traffic.
+
+#What other solutions were considered, and why were they not chosen?
+N/A
+
+#What would be the impact of not implementing this change?
+Continued increased traffic on long/fast, unconsented traffic sent to the internet possibly by default.
+
+#What aspects of the proposal need further discussion or exploration during the RFC process?
+Whether or not this should pertain to all default modem setups thereby MQTT only working with private meshes or just the default long/fast public preset.
+
+#Are there technical challenges or uncertainties that need to be addressed?
+Probably not.
+
